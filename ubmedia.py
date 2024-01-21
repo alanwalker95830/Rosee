@@ -20,7 +20,7 @@ string_pyrogram = string_heroku
 
 idss = []
 
-ub = Client(session_string =string_pyrogram, api_id=api_id_pyrogram, api_hash=api_hash_pyrogram, sleep_threshold=60)
+ub = Client(name="auto-delete",session_string =string_pyrogram, api_id=api_id_pyrogram, api_hash=api_hash_pyrogram, sleep_threshold=60)
 
 def clean_data():
     print("checking media")
