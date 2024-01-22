@@ -1,5 +1,5 @@
-from pyrogram import Client, filters
-from pyrogram import MessageFilters
+from pyrogram import Client, filter
+from pyrogram import MessageFilter
 from apscheduler.schedulers.background import BackgroundScheduler
 import os
 from os import getenv
