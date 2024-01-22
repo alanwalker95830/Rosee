@@ -1,3 +1,4 @@
+from pyrogram import Client, filters
 from pyrogram import MessageFilters
 from apscheduler.schedulers.background import BackgroundScheduler
 import os
