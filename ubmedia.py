@@ -1,4 +1,4 @@
-from pyrogram import Client
+from pyrogram import Client,filters
 from pyrogram import MessageFilters
 from apscheduler.schedulers.background import BackgroundScheduler
 import os
@@ -24,7 +24,7 @@ ub = Client(name="auto-delete",session_string =string_pyrogram, api_id=api_id_py
 
 def clean_data():
     print("checking media")
-    for ids in ub.search_messages(chat_id=group, filter=MessageFilters.photo | MessageFilters.video, limit=20):
+    for ids in ub.search_messages(chat_id=group, filter=photo | video, limit=20):
         msg_id = ids.message.id  # consistent naming
         idss.append(msg_id)
         ub.copy_message(chat_id=channel, from_chat_id=group, message_id=msg_id)
